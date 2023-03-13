@@ -58,11 +58,13 @@ public class Camera {
     }
 
     public static void main(String[] args) {
-        Camera[] cameras = new Camera[4];
-        cameras[0] = new Camera("Canon", "1920x1080", 2.5, "SD", 0);
-        cameras[1] = new Camera();
-        cameras[2] = getInstance();
-        cameras[3] = getInstance();
+        Camera[] cameras = {
+            new Camera("Canon", "1920x1080", 2.5, "SD", 0),
+            new Camera(),
+            getInstance(),
+            getInstance()
+        };
+
         for (Camera camera : cameras) {
             System.out.println(camera.toString());
         }
